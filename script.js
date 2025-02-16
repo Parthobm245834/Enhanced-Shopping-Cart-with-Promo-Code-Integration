@@ -19,17 +19,18 @@ async function fetchProducts() {
     }
 }
 
-// Display products in UI
+// Display products in UI with images
 function displayProducts(products) {
     const container = document.getElementById("products-container");
     container.innerHTML = "";
     products.slice(0, 6).forEach(product => {
         const productElement = document.createElement("div");
+        productElement.classList.add("product");
         productElement.innerHTML = `
+            <img src="${product.image}" alt="${product.title}">
             <h3>${product.title}</h3>
             <p>Price: $${product.price}</p>
             <button onclick="addToCart(${product.id}, '${product.title}', ${product.price})">Add to Cart</button>
-            <hr>
         `;
         container.appendChild(productElement);
     });
