@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#products-container, #cart {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#products-container {
+    width: 50%;
+}
+
+#cart {
+    width: 40%;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+}
+
+#promo-message {
+    color: red;
+}
